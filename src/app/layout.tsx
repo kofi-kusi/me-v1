@@ -1,10 +1,23 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import { Anonymous_Pro } from "next/font/google"
+import Header from "@/components/ui/header"
+import Footer from "@/components/ui/footer";
+import "@/styles/globals.css";
 
+const anonymousPro = Anonymous_Pro({
+  variable: "--font-anonymous-pro",
+  weight: ["400", "700"], 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true
+})
 
 export const metadata: Metadata = {
-  title: "Kofi Kusi Appau",
-  description: "Kofi Kusi's portfolio.",
+  title: {
+    template: '%s | Kofi Kusi',
+    default: 'Kofi Kusi Appau'
+  },
+  description: "Kofi Kusi's portfolio. View my projects and other works!"
 };
 
 export default function RootLayout({
@@ -14,9 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      <body className={`${anonymousPro.variable}`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
