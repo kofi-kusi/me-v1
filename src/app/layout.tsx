@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${anonymousPro.variable}`}>
-        <div className="max-w-xl mx-auto">
+        <div className="max-w-xl mx-auto mt-10 px-4">
           <Header />
           <main>{children}</main>
           <Footer />
