@@ -2,7 +2,9 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0d0b09;
+  --grid-color: #ebebeb;
+  --indigo: #6366f1;
 }
 
 @theme inline {
@@ -14,13 +16,60 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0d0b09;
+    --foreground: #fafaf7;
+    --grid-color: #404040;
   }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-anonymous-pro);
+  min-height: 100vh;
+  background-image: radial-gradient(var(--grid-color) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
+
+nav a {
+  position: relative;
+  color: #949292;
+  text-decoration: underline;
+  text-decoration-color: rgba(107, 114, 128, 0.5);
+  text-underline-offset: 0.225rem;
+  transition: text-decoration-color .3s ease-out;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.225rem;
+  width: 0%;
+  height: 2px;
+  background-color: var(--foreground);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration-color: transparent;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: var(--foreground)
+}
+
