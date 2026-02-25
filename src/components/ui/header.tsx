@@ -2,18 +2,21 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "../ThemeToggle";
 
 export default function Header() {
     const pathname = usePathname()
   return (
     <header>
       <div className="flex justify-between items-center">
-        <div>Kofi Kusi</div>
-        <div>Resume</div>
+        <div className="font-black " >kofi kusi</div>
+        <div className="flex gap-2 items-center">
+          <ThemeToggle />
+          Resume</div>
       </div>
-      <hr />
+      <hr className="my-2"/>
       <nav >
-        <ul className="flex gap-4">
+        <ul className="flex gap-6">
           <li>
             <Link href="/" className={`${pathname === "/" ? "active": ""}`}>Home</Link>
           </li>
