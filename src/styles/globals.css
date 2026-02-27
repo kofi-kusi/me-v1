@@ -1,10 +1,23 @@
 @import "tailwindcss";
 
+/* Light mode */
 :root {
-  --background: #ffffff;
-  --foreground: #0d0b09;
-  --grid-color: #ebebeb;
-  --indigo: #6366f1;
+  --background: #f4f7f8;
+  --foreground: #11181c;
+
+  --grid-color: #e2e8ea;
+
+  --card: #ffffff;
+  --card-foreground: #11181c;
+  --border: #d9e3e5;
+
+  --primary: #d3002d;
+  --primary-hover: #ce4b67;
+  --primary-foreground: #ffffff;
+  --primary-soft: #d3002d;
+
+  --muted: #e9f0f2;
+  --muted-foreground: #4e4a49;
 }
 
 @theme inline {
@@ -14,12 +27,24 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0d0b09;
-    --foreground: #fafaf7;
-    --grid-color: #404040;
-  }
+/* Dark mode */
+[data-theme="dark"] {
+  --background: #303030;
+  --foreground: #f5f7f7;
+
+  --grid-color: #3c3c3c;
+
+  --card: #3a3a3a;
+  --card-foreground: #f5f7f7;
+  --border: #454545;
+
+  --primary: #85e6ea;
+  --primary-hover: #5fd4d9;
+  --primary-foreground: #0f1f20;
+  --primary-soft: #16393b;
+
+  --muted: #383838;
+  --muted-foreground: #a3a3a3;
 }
 
 html,
@@ -33,18 +58,25 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-anonymous-pro);
-  min-height: 100vh;
+  /* min-height: 100vh;
   background-image: radial-gradient(var(--grid-color) 1px, transparent 1px);
-  background-size: 30px 30px;
+  background-size: 30px 30px; */
+  min-height: 100vh;
+
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+
+  background-size: 40px 40px;
 }
 
 nav a {
   position: relative;
-  color: #949292;
   text-decoration: underline;
-  text-decoration-color: rgba(107, 114, 128, 0.5);
+  color: var(--muted-foreground);
+  text-decoration-color: #6b728080;
   text-underline-offset: 0.225rem;
-  transition: text-decoration-color .3s ease-out;
+  transition: text-decoration-color 0.3s ease-out;
 }
 
 nav a::after {
@@ -54,7 +86,7 @@ nav a::after {
   bottom: -0.225rem;
   width: 0%;
   height: 2px;
-  background-color: var(--foreground);
+  background-color: var(--primary);
   transition: width 0.3s ease;
 }
 
@@ -70,6 +102,30 @@ nav a.active {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  color: var(--foreground)
+  color: var(--primary-hover);
 }
 
+section a {
+  color: var(--primary-hover);
+  font-weight: 500;
+  position: relative;
+  text-decoration: underline;
+  text-underline-offset: .225rem;
+  text-decoration-color: #6b728080;
+  transition: text-decoration-color 0.3s ease-out;
+}
+
+section a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.225rem;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-hover);
+  transition: width 0.5s ease-in-out;
+}
+
+section a:hover::after {
+  width: 100%
+}
