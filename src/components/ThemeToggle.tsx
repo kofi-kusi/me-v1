@@ -19,7 +19,7 @@ export default function ThemeToggle() {
   };
 
   return (
-    <button onClick={toggleTheme}>
+    <button onClick={toggleTheme} className="cursor-pointer hover:text-primary-hover duration-300 hover:rotate-[15deg]">
       {theme === "dark" ? <Sun size={16}/> : <Moon size={16}/>}
     </button>
   );
