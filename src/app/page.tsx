@@ -1,3 +1,9 @@
+import Status from "@/components/home/status";
+
 export default function Home() {
-  return <h1>Kofi Kusi</h1>;
+  return (
+    <div>
+      <Status />
+    </div>
+  );
 }
