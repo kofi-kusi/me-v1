@@ -4,7 +4,7 @@ import { ArrowBigDownDash } from "lucide-react";
 export default function Status() {
   return (
     <div>
-      <section className="my-4" >
+      <section className="my-4">
         <CustomList>
           <CustomListItem>
             <p className="font-bold">Currently:</p>
@@ -17,7 +17,9 @@ export default function Status() {
           </CustomListItem>
           <CustomListItem isSubItem>
             Learning stuff on @{" "}
-            <Link href="https://oreilly.com">O&apos;Reilly</Link>
+            <Link href="https://oreilly.com" target="_blank">
+              O&apos;Reilly
+            </Link>
           </CustomListItem>
           <CustomListItem isSubItem>
             Exploring ML with
@@ -25,7 +27,10 @@ export default function Status() {
               size={16}
               className="text-foreground opacity-60 ml-16"
             />
-            <Link href="https://learning.oreilly.com/library/view/hands-on-machine-learning/9798341607972/">
+            <Link
+              href="https://learning.oreilly.com/library/view/hands-on-machine-learning/9798341607972/"
+              target="_blank"
+            >
               Hands-On Machine Learning with Scikit-Learn and PyTorch
             </Link>
           </CustomListItem>
@@ -44,15 +49,14 @@ export default function Status() {
             </Link>
           </CustomListItem>
           <CustomListItem isSubItem>
-            Club Lead  @{" "}
-            <Link href="https://csclub.uwaterloo.ca" target="_blank">
+            Club Lead @{" "}
+            <Link href="https://amalitech.com" target="_blank">
               AmaliTech Coding Club KsTU
             </Link>
           </CustomListItem>
         </CustomList>
       </section>
 
-      
       <section className="my-4">
         <CustomList>
           <CustomListItem>
@@ -61,7 +65,6 @@ export default function Status() {
         </CustomList>
       </section>
 
-      
       <section className="my-4">
         <CustomList>
           <CustomListItem>
