@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Me from "@/components/about/me"
 
 export const metadata: Metadata = {
   title: 'About',
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 }
 
 export default function About() {
-  return <h1>about me</h1>;
+  return (
+    <div className="my-4 flex flex-col gap-4">
+      <Me />
+    </div>
+  );
 }
