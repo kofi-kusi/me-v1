@@ -131,3 +131,7 @@ section a::after {
 section a:hover::after {
   width: 100%
 }
+
+section > h1 {
+  font-weight: bold;
+}
