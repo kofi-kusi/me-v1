@@ -26,7 +26,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-primary-hover: var(--primary-hover);
-  --color-primary: var(--primary)
+  --color-primary: var(--primary);
+  --color-muted-foreground: var(--muted-foreground)
 }
 
 /* Dark mode */
@@ -72,6 +73,31 @@ body {
   background-size: 40px 40px;
 }
 
+main li a {
+  color: var(--primary-hover);
+  font-weight: 500;
+  position: relative;
+  text-decoration: underline;
+  text-underline-offset: .225rem;
+  text-decoration-color: #6b728080;
+  transition: text-decoration-color 0.3s ease-out;
+}
+
+main li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.225rem;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-hover);
+  transition: width 0.5s ease-in-out;
+}
+
+main li a:hover::after {
+  width: 100%
+}
+
 nav a {
   position: relative;
   text-decoration: underline;
@@ -107,31 +133,6 @@ nav a.active {
   color: var(--primary-hover);
 }
 
-section a {
-  color: var(--primary-hover);
-  font-weight: 500;
-  position: relative;
-  text-decoration: underline;
-  text-underline-offset: .225rem;
-  text-decoration-color: #6b728080;
-  transition: text-decoration-color 0.3s ease-out;
-}
-
-section a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.225rem;
-  width: 0%;
-  height: 2px;
-  background-color: var(--primary-hover);
-  transition: width 0.5s ease-in-out;
-}
-
-section a:hover::after {
-  width: 100%
-}
-
-section > h1 {
+section > h2 {
   font-weight: bold;
 }
