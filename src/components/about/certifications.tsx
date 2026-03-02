@@ -1,9 +1,11 @@
 import Badge from "@/components/ui/badge";
+import { CustomListItem } from "../ui/custom-list";
+import Link from "next/link";
 
 export default function Certs() {
   return (
     <section>
-      <h2>Certifications:</h2>
+      <h2>Recent Certifications:</h2>
       <ul className="ml-6 my-4">
         <Badge
           url="https://www.credly.com/badges/ce735840-2053-4b7e-95b9-2abaf73b0e77/public_url"
@@ -19,6 +21,10 @@ export default function Certs() {
           from="O'Reilly"
         />
       </ul>
+      <CustomListItem isSubItem>
+        Checkout <Link href="https://www.linkedin.com/in/kofi-kusi/details/certifications/" target="_blank">more</Link>.
+      </CustomListItem>
+
     </section>
   );
 }
