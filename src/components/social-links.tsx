@@ -8,6 +8,7 @@ export default function SocialIcons() {
       <li className="p-0 sm:p-2">
         <Link
           href="https://x.com/_kofi_kusi"
+          target="_blank"
           aria-label="Twitter profile"
           className="twitter-icon flex items-center justify-center transition-all duration-300 hover:rotate-[15deg] hover:text-[#1DA1F2]"
         >
@@ -17,6 +18,7 @@ export default function SocialIcons() {
       <li className="p-0 sm:p-2">
         <Link
           href="https://github.com/kofi-kusi"
+          target="_blank"
           aria-label="GitHub profile"
           className="flex items-center justify-center transition-all duration-300 hover:rotate-[15deg] hover:text-[#6366f1]"
         >
@@ -26,6 +28,7 @@ export default function SocialIcons() {
       <li className="p-0 sm:p-2">
         <Link
           href="https://linkedin.com/in/kofi-kusi"
+          target="_blank"
           aria-label="LinkedIn profile"
           className="flex items-center justify-center transition-all duration-300 hover:rotate-[15deg] hover:text-[#0077B5]"
         >
