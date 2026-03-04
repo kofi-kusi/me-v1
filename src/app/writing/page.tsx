@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Articles from "@/components/writing/articles";
 
 export const metadata: Metadata = {
   title: 'Writings',
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 }
 
 export default function Writing() {
-  return <h1>writing</h1>;
+  return (
+    <>
+    <Articles />
+    </>
+  );
 }
