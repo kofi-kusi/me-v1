@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Joruney Reflection",
+        "date": "March 1, 2026",
+        "subject": "Personal Life",
+        "wordCount": 222,
+        "filename": "journey-reflection.md"
+    },
+    {
+        "title": "GitHub Fundamentals",
+        "date": "March 3, 2026",
+        "subject": "Technology",
+        "wordCount": 100,
+        "filename": "github-fundamentals.md"
+    }
+]
