@@ -20,10 +20,10 @@ export function CustomListItem({ children, isSubItem }: CustomListItemProps) {
         <li className={`flex justify-center w-fit gap-2 transition-all duration-300 hover:translate-x-2 group ${isSubItem ? "ml-6" : ""}`}>
           {
             isSubItem ? (
-              <ArrowBigRightDash size={16} className="mt-1 flex-shrink-0 transition-all duration-300 group-hover:rotate-[20deg] text-foreground opacity-60"/>
+              <ArrowBigRightDash size={16} className="mt-1 flex-shrink-0 transition-all duration-300 group-hover:rotate-[20deg] opacity-60"/>
             ) : (
 
-              <ArrowBigRight size={16} className="mt-1 flex-shrink-0 transition-all duration-300 group-hover:rotate-[20deg] text-foreground opacity-70"/>
+              <ArrowBigRight size={16} className="mt-1 flex-shrink-0 transition-all duration-300 group-hover:rotate-[20deg] opacity-70"/>
             )
           }
           <span>{children}</span>

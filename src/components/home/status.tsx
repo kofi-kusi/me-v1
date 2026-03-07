@@ -1,13 +1,13 @@
 import { CustomListItem, CustomList } from "../ui/custom-list";
 import Link from "next/link";
-import { ArrowBigDownDash } from "lucide-react";
+import { BookText } from "lucide-react";
 export default function Status() {
   return (
     <div>
       <section className="my-4">
         <CustomList>
           <CustomListItem>
-            <p className="font-bold">Currently:</p>
+            <p className="font-bold text-primary">Currently:</p>
           </CustomListItem>
           <CustomListItem isSubItem>
             Studying CS @{" "}
@@ -22,15 +22,11 @@ export default function Status() {
             </Link>
           </CustomListItem>
           <CustomListItem isSubItem>
-            Exploring ML with
-            <ArrowBigDownDash
-              size={16}
-              className="text-foreground opacity-60 ml-16"
-            />
+            Reading <BookText size={16} className="inline"/>:
             <Link
               href="https://learning.oreilly.com/library/view/hands-on-machine-learning/9798341607972/"
               target="_blank"
-            >
+              >
               Hands-On Machine Learning with Scikit-Learn and PyTorch
             </Link>
           </CustomListItem>
@@ -40,7 +36,7 @@ export default function Status() {
       <section className="my-4">
         <CustomList>
           <CustomListItem>
-            <p className="font-bold">Recently:</p>
+            <p className="font-bold text-primary">Recently:</p>
           </CustomListItem>
           <CustomListItem isSubItem>
             Software Developer intern @{" "}

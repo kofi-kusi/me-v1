@@ -13,7 +13,7 @@ export default function Footer() {
           </span>
           Kofi Kusi Appau.
         </p>
-        <p className="text-foreground opacity-50">All Rights Reserved.</p>
+        <p className="text-muted-foreground text-sm">All Rights Reserved.</p>
       </div>
     </footer>
   );

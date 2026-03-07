@@ -11,12 +11,14 @@ export default function Header() {
   return (
     <header>
       <div className="flex justify-between">
-        <h1 className="font-black text-lg text-primary">kofi kusi</h1>
+        <h1 className="font-black text-lg text-primary tracking-wide">
+          <Link href="/">kofi kusi</Link>
+        </h1>
         <div className="flex gap-4 items-center">
           <ThemeToggle />
-          <Link href="resume.pdf" className="hover:text-primary">
-            <div className="flex items-center gap-2 border-2 border-primary-hover rounded-sm px-2 py-[1.5px]">
-              <FileUser size={16} />
+          <Link href="/resume.pdf" className="hover:text-primary-hover">
+            <div className="flex items-center gap-2 border border-border rounded-md px-3 py-1 text-sm transition-all duration-300 hover:border-primary hover:shadow-[0_0_12px_rgba(0,85,255,0.2)]">
+              <FileUser size={14} />
               Resume
             </div>
           </Link>
